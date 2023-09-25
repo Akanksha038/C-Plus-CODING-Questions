@@ -1,0 +1,55 @@
+// ******************************************************************************/
+#include <iostream>
+
+#include<vector>
+using namespace std;
+
+int main()
+{
+   vector<int> array;
+   int size=(sizeof(array)/sizeof(int)); //6 , why this give 6 answer 
+   vector<char> array1;
+   int size1=(sizeof(array1)/sizeof(char)); //24 , why this give 24 answer 
+   vector<bool> array2;
+   int size2=(sizeof(array2)/sizeof(bool)); //40, why this give 40 answer 
+   cout<<" vectior size in casw of int"<<size<<endl;
+   
+    cout<<" vectior size in casw of bool"<<size2<<endl;
+     cout<<" vectior size in casw of char"<<size1<<endl;
+   cout<<array.size()<<endl; //0
+   cout<<array.capacity()<<endl; //0
+   array.push_back(100);
+   array.push_back(1000);
+   
+   for(int i=0;i<array.size();i++){
+       cout<<array[i]<<endl;
+   }
+   array.pop_back();
+   cout<<" i'm printing element after removing element from vector"<<endl;
+   for(int i=0;i<array.size();i++){
+       cout<<array[i]<<endl;
+   }
+   
+   
+   vector<int>bete(10);
+   cout<<"bete ki size"<<bete.size()<<endl;
+   cout<<"bete ki capacity"<<bete.capacity()<<endl;
+   cout<<" bete ke elements "<<endl;
+   for(int i=0;i<bete.size();i++){
+       cout<<bete[i]<<" ";
+   }
+   cout<<endl;
+   
+   
+   vector<int>eleven(10,-1);
+   cout<<"elevenki size"<<eleven.size()<<endl;
+   cout<<"eleven ki capacity"<<eleven.capacity()<<endl;
+   cout<<" eleven ke elements "<<endl;
+   for(int i=0;i<eleven.size();i++){
+       cout<<eleven[i]<<" ";
+   }
+   
+   
+   
+   return 0;
+}

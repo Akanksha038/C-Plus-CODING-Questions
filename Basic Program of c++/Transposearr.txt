@@ -1,0 +1,59 @@
+/******************************************************************************
+Linear Search
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+
+void Transpose(int arr[][3],int col,int row,int transposearr[][3])
+{
+    // transpose ke liye i ko j se swap kar do
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            transposearr[j][i]=arr[i][j];
+        }
+    }
+}
+void Print(int arr[3][3],int col,int row,int transposearr[3][3])
+{
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<col;j++)
+        {
+            
+            cout<<transposearr[i][j]<<" ";
+             
+            
+        }
+        cout<<endl;
+}
+}
+
+      int main()
+          {
+    int arr[3][3]={10,20,30,40,50,60,70,80,90};
+                //  {10,20,30},
+                //  {40,50,60},
+                //  {70,80,90,10}
+        
+                //   };
+                int transposearr[3][3];
+    int x=50;
+    int row=3; 
+    int col=3;
+    Transpose( arr,col, row, transposearr);
+    Print(arr,row,col,transposearr);
+    
+   
+   
+
+    return 0;
+}
+
+// output
+
+10 40 70 
+20 50 80 
+30 60 90 

@@ -1,0 +1,43 @@
+/******************************************************************************
+
+Quad sum
+
+*******************************************************************************/
+#include <iostream>
+#include<vector>
+
+using namespace std;
+
+int main()
+{
+    vector<int>arr{10,20,30,40,50,5,2,3,9,8,7,55};
+    int sum=100;
+    for(int i=0;i<arr.size();i++){
+        for(int j=i+1;j<arr.size();j++){
+            for(int k=j+1;k<arr.size();k++){
+                for(int l=k+1;l<arr.size();l++){
+                if(sum==arr[i]+arr[j]+arr[k]+arr[l]){
+                    cout<< "Quadraplet number are "<< '('<<arr[i]<<','<<arr[j]<<','<<arr[k]<<','<<arr[l]<<')'<<endl;
+                }
+            }
+        }
+        
+    }
+    }
+    
+    return 0;
+}
+
+/******************************************************************************
+
+output:
+
+Quadraplet number are (10,20,30,40)
+Quadraplet number are (10,30,5,55)
+Quadraplet number are (30,8,7,55)
+Quadraplet number are (40,50,2,8)
+Quadraplet number are (40,50,3,7)
+Quadraplet number are (40,2,3,55)
+
+
+*******************************************************************************/

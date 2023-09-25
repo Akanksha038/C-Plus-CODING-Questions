@@ -1,0 +1,34 @@
+
+#include <iostream>
+#include<climits>
+
+using namespace std;
+
+// [10 20 30 40 50 60 ]
+
+int main()
+{
+    int max=INT_MIN;
+    int min=INT_MAX;
+    int arr[]={10,80,30,40,100,60};
+    int n=6;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]>max )
+      {
+           max=arr[i];
+      } 
+      else if(arr[i]<min )
+        {
+           min=arr[i];
+         } 
+      }
+      
+    
+      
+    
+    cout<<max<<min;
+
+    return 0;
+}
+

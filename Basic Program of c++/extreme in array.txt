@@ -1,0 +1,35 @@
+// extream in array
+
+
+
+#include <iostream>
+#include<climits>
+
+using namespace std;
+
+// [10 20 30 40 50 60 70 80 ]
+// op=> [10 80 20 70 30 60 40 50 ]
+// 
+int main()
+{
+  
+    int array[]={10, 20 , 30 , 40, 50 ,60,70,80,90,100};
+    int n=10;
+    int start=0;
+    int end=n-1;
+    while(start<=end){
+        cout<<array[start]<<","<<array[end];
+        start++;
+      
+        end--;
+        cout<<" ";
+    }
+      
+      
+    
+      
+    
+    
+
+    return 0;
+}
