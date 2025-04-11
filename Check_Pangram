@@ -1,0 +1,53 @@
+Question 2: 
+▲Campusmonk 
+Problem Description 
+Given a sentence represented as an array A of strings that contains all lowercase alphabets. 
+Check if it is a pangram or not. 
+A pangram is a unique sentence in which every letter of the lowercase alphabet is used at least once. 
+Problem Constraints 
+1 <= |A| <= 10 
+1 <= |A|<= 5 
+Input Format 
+Given an array of strings A. 
+Output Format 
+Return an integer. 
+Example Input 
+Input 1: 
+A ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"] 
+Input 2: 
+A ["bit", "scale"] 
+Example Output 
+Output 1: 1 
+Output 2: 
+0 
+
+
+Solution: 
+
+#include<iostream>
+#include<set>
+#include<string>
+using namespace std;
+
+int isPanagram(string str){
+    set<char>s;
+    
+    for(char ch:str)
+    {
+        if(ch>='a'  && ch<='z')
+        {
+            s.insert(ch);
+        }
+    }
+    
+    return s.size()==26?1:0;
+}
+
+
+int main(){
+    string str;
+    getline(cin,str);
+    int ans=isPanagram(str);
+    cout<<ans<<endl;
+    return 0;
+}
