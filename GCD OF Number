@@ -1,0 +1,39 @@
+Question 1: Lowest Common Multiple (LCM) 
+Problem Constraints 
+1 <= A <= 10° 
+1<= B <= 10% 
+Input Format 
+First argument is an integer A. 
+Second argument is an integer B. 
+Output Format 
+Return an integer. 
+Example Input 
+Input 1: 
+A6B-4 
+Input 2: 
+A=1B = 11 
+Example Output 
+Output 1: 12 
+Output 2: 11 
+
+
+solution:
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+long long  gcd(long long  a,long long b){
+    if(b==0){
+        return a;
+    }
+    return gcd(b,a%b);
+}
+
+int main() {
+    long long a,b;
+    cin>>a>>b;
+    long long  hcf=gcd(a,b);
+    long long  ans=(a/hcf)*b;
+    cout << ans;
+
+    return 0;
+}
