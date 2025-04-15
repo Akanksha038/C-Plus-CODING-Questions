@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cmath>
+#include <vector>
+#include <iomanip> // for setprecision
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<double> arr(n);
+
+    // Input elements
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+
+    double meansum = 0;
+
+    // Calculate the sum of elements to get the mean
+    for (int i = 0; i < n; ++i) {
+        meansum += arr[i];
+    }
+
+    double mean = meansum / n;
+    double varisum = 0;
+
+    // Calculate the variance sum (sum of squared differences from the mean)
+    for (int i = 0; i < n; ++i) {
+        double squ = (arr[i] - mean) * (arr[i] - mean);
+        varisum += squ;
+    }
+
+    // Calculate standard deviation
+    double sd = sqrt(varisum / n);
+
+    // Print standard deviation with 2 decimal places
+    cout << fixed << setprecision(2) << sd << endl;
+
+    return 0;
+}
